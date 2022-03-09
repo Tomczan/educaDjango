@@ -26,7 +26,7 @@ class OwnerCourseMixin(OwnerMixin):
 class OwnerCourseEditMixin(OwnerCourseMixin, OwnerEditMixin):
     fields = ['subject', 'title', 'slug', 'overview']
     success_url = reverse_lazy('manage_course_list')
-    template_name = 'courses/manage/course/list.html'
+    template_name = 'courses/manage/course/form.html'
 
 
 class ManageCourseListView(OwnerCourseMixin, ListView):
