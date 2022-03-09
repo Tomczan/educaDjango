@@ -27,4 +27,4 @@ class OrderField(models.PositiveIntegerField):
             setattr(model_instance, self.attname, value)
             return value
         else:
-            return super(OrderField, self).pre_save(model_instance, add)
+            return super().pre_save(model_instance, add)
