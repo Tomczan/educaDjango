@@ -4,7 +4,8 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #333;
+  color: rgb(34, 34, 34);
+  background-color: rgb(0, 160, 223);
 }
 
 a {
@@ -253,6 +254,8 @@ ul#course-modules li:hover {
   margin-bottom: 10px;
   width: 400px;
   overflow: auto;
+  color: #fff;
+  background-color: #333;
 }
 
 .course-info a {
