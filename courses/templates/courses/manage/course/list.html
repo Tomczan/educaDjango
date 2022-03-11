@@ -11,6 +11,7 @@
             <p>
                 <a href="{% url 'course_edit' course.id %}">Edytuj</a>
                 <a href="{% url 'course_delete' course.id %}">Usuń</a>
+                <a href="{% url 'course_module_update' course.id %}">Edytuj moduly</a>
             </p>
         </div>
     {% empty %}
