@@ -18,6 +18,17 @@
         Instruktor: {{ object.owner.get_full_name }}
       </p>
       {{ object.overview|linebreaks }}
+      {% if request.user.is_authenticated %}
+        <form action="{% url 'student_enroll_course' %}" method="post">
+          {{ enroll_form }}
+          {% csrf_token %}
+          <input type="submit" value="Zapisz się">
+        </form>
+      {% else %}
+        <a href="{% url 'student_registration' %}" class="button">
+          Zarejestruj się, aby móc się zapisać na kurs.
+        </a>
+      {% endif %}
     </div>
   {% endwith %}
 {% endblock %}

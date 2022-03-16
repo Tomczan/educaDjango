@@ -13,6 +13,7 @@ from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
 
 from .forms import ModuleFormSet
 from .models import Course, Module, Content, Subject
+from students.forms import CourseEnrollForm
 
 # Create your views here.
 # https://docs.djangoproject.com/en/4.0/topics/class-based-views/mixins/
@@ -198,3 +199,9 @@ class CourseListView(TemplateResponseMixin, View):
 class CourseDetailView(DetailView):
     model = Course
     template_name = 'courses/course/detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(CourseDetailView, self).get_context_data(**kwargs)
+        context['enroll_form'] = CourseEnrollForm(
+            initial={'course': self.get_object})
+        return context
