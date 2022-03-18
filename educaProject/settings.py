@@ -130,6 +130,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Succesfull login redirect
+# Successfull login redirect
 
 LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
