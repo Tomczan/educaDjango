@@ -1,6 +1,10 @@
 from django.contrib import admin
 from .models import Subject, Course, Module
 
+
+# Wykorzystanie witryny administracyjnej memcache.
+admin.site.index_template = 'memcache_status/admin_index.html'
+
 # Register your models here.
 
 
