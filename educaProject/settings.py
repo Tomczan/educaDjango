@@ -154,3 +154,12 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
+
+# Rest framework
+# https://www.django-rest-framework.org/api-guide/settings/
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
