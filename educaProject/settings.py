@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'memcache_status',
     'rest_framework',
     'chat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -164,3 +165,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+# ASGI
+
+ASGI_APPLICATION = 'educaProject.routing.application'
